@@ -1,0 +1,10 @@
+Los atributos de la clase vivienda serian:
+-Puerta
+-Calle
+-Piso
+-Localidad
+-Dueño
+Y las subclases serian:
+-Piso
+-Local
+-Casa
