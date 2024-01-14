@@ -26,44 +26,28 @@ public class Fraccion {
 
     public void simplificar(){
 
-        boolean simpli=false;
-        int contador=6;
+        int grande=0;
 
-        for(int i=5;i>=2;i--){
-            contador=contador-1;
-            
+        if(this.numerador>this.denominador){
+            grande=this.numerador;
+        }else grande=this.denominador;
+
+        for(int i=grande;i>=1;i--){
+
 
             if(this.numerador%i==0 && this.denominador%i==0){
-                simpli=true;
-                break;
+                this.denominador=this.denominador/i;
+                this.numerador=this.numerador/i;
             }
-            
+
+
         }
 
-        
-
-        boolean salir=false;
-        if(simpli==true){
-
-            do {
-                
-                this.denominador=this.denominador/contador;
-                this.numerador=this.numerador/contador;
-
-                break;
-
-            } while (salir==false);
-
-        }    
-
-    }
 
 
 
-    public void simplificarmax(){
-        for(int i=0;i<=99;i++){
-            simplificar();
-        }
+
+
     }
 
 
@@ -124,14 +108,7 @@ public class Fraccion {
             grande=this.denominador;
         }
 
-        System.out.println(" "+this.Getnumerador());
-        
-        System.out.print("-");
-        for(int i=1;i<=Integer.toString(grande).length();i++){
-            System.out.print("-");
-        }
-        System.out.println("-");
-        System.out.println(" "+this.GetDenominador());
+        System.out.println(this.numerador+"/"+this.denominador);
     }
 
 
