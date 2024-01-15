@@ -8,6 +8,14 @@ public class Terminal{
         this.numero=a;
     }
 
+    public String getNumero() {
+        return this.numero;
+    }
+
+    public int getTiempoconversacion() {
+        return this.tiempoconversacion;
+    }
+
 
     public void llama(Terminal a, int b){
         this.tiempoconversacion+=b;

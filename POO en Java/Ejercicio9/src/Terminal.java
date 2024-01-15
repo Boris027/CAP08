@@ -14,6 +14,9 @@ public abstract class Terminal{
         a.tiempoconversacion+=b;
     }
 
+    public int getTiempoconversacion() {
+        return this.tiempoconversacion;
+    }
     
 
     public String toString(){
